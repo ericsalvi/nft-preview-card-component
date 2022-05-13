@@ -30,7 +30,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: [frontendmentor.io](https://www.frontendmentor.io/solutions/)
-- Live Site URL: [https://ericsalvi.github.io/](https://ericsalvi.github.io/)
+- Live Site URL: [https://ericsalvi.github.io/nft-preview-card-component/](https://ericsalvi.github.io/nft-preview-card-component/)
 
 ## My process
 
