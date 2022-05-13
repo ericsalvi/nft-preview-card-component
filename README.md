@@ -29,7 +29,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [frontendmentor.io](https://www.frontendmentor.io/solutions/)
+- Solution URL: [frontendmentor.io](https://www.frontendmentor.io/solutions/nft-card-component-first-submission-after-a-9-month-break-By1LC7nIc)
 - Live Site URL: [https://ericsalvi.github.io/nft-preview-card-component/](https://ericsalvi.github.io/nft-preview-card-component/)
 
 ## My process
