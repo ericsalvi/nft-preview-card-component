@@ -1,0 +1,241 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.12,
+* Autoprefixer: v10.4.4
+* Browsers: last 4 version
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap');
+
+:root {
+    --soft-blue: hsl(215, 51%, 70%);
+    --cyan: hsl(178, 100%, 50%);
+    --cyan-opacity-0: hsla(178, 100%, 50%, 0);
+    --cyan-opacity-full: hsla(178, 100%, 50%, .5);
+    --background-color: hsl(217, 54%, 11%);
+    --background-card-color: hsl(216, 50%, 16%);
+    --hr: hsl(215, 32%, 27%);
+    --white: hsla(0, 0%, 100%, 1);
+    --white-opacity-0: hsla(0, 0%, 100%, 0);
+    --timing: .2s;
+}
+
+*,
+*::after, 
+*::before {
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    -webkit-font-smoothing: antialiased;
+}
+
+html {
+    font-family: "Outfit", sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+}
+
+body {
+    background-color: var(--background-color);
+    color: var(--soft-blue);
+    display: -ms-grid;
+    display: grid;
+    height: 100vh;
+    padding: 24px;
+    place-content: center;
+}
+
+.card {
+    background-color: var(--background-card-color);
+    border-radius: 12px;
+    -webkit-box-shadow: 0px 30px 24px 8px rgba(0 0 0 / 0.08);
+            box-shadow: 0px 30px 24px 8px rgba(0 0 0 / 0.08);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    font-size: 0.889rem;
+    gap: 12px;
+    max-width: 350px;
+    padding: 24px;
+}
+
+.card__image {
+    cursor: pointer;
+    display: -ms-grid;
+    display: grid;
+    height: 100%;
+    inset: 0;
+    place-content: center;
+    position: relative;
+    width: 100%;
+}
+
+.card__image::before {
+    background-color: var(--cyan-opacity-0);
+    border-radius: 10px;
+    content: "";
+    inset: 0;
+    position: absolute;
+    -webkit-transition: background-color var(--timing) ease-in-out;
+    -o-transition: background-color var(--timing) ease-in-out;
+    transition: background-color var(--timing) ease-in-out;
+}
+
+.card__image > svg {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-row-align: center;
+    -ms-grid-column-align: center;
+    place-self: center;
+    position: absolute;
+    align-self: center;
+}
+
+.card__image svg path.icon-view {
+    fill: var(--white-opacity-0);
+    -webkit-transition: fill var(--timing) ease-in-out;
+    -o-transition: fill var(--timing) ease-in-out;
+    transition: fill var(--timing) ease-in-out;
+}
+
+.card__image:hover svg path.icon-view {
+    fill: var(--white);
+}
+ 
+.card__image:hover::before {
+    background-color: var(--cyan-opacity-full);
+    cursor: pointer;
+}
+
+.card img {
+    border-radius: 10px;
+    height: 100%;
+    width: 100%;
+}
+
+.card h1 {
+    color: var(--white);
+    font-size: 1.222rem;
+    margin-bottom: 0;
+    padding-bottom: 4px;
+    -webkit-transition: color var(--timing) ease-in-out;
+    -o-transition: color var(--timing) ease-in-out;
+    transition: color var(--timing) ease-in-out;
+}
+
+.card h1:hover {
+    color: var(--cyan);
+    cursor: pointer;
+}
+
+.card p {
+    font-size: 1rem;
+    font-weight: 300;
+    line-height: 1.5;
+}
+
+.card__meta {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    border-bottom: 1px solid var(--hr);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    margin-bottom: 4px;
+    padding: 10px 0 24px;
+}
+
+.card__meta > div {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    gap: 6px;
+    line-height: 0.889rem;
+}
+
+.card__meta > div > span {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+}
+
+.card__price {
+    color: var(--cyan);
+    font-weight: 600;
+}
+
+.card__time {
+    padding-right: 2px;
+}
+
+.card__author {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    padding-bottom: 6px;
+}
+
+.card__author img {
+    border: 1px solid var(--white);
+    border-radius: 50%;
+    height: auto;
+    margin-right: 16px;
+    width: 33px;
+}
+
+.card__author-text {
+    padding-bottom: 3px;
+}
+
+.card__author a {
+    color: var(--white);
+    padding-left: 2px;
+    text-decoration: none;
+    -webkit-transition: color var(--timing) ease-in-out;
+    -o-transition: color var(--timing) ease-in-out;
+    transition: color var(--timing) ease-in-out;
+}
+
+.card__author a:hover {
+    color: var(--cyan);
+}
+
+@media (max-width: 375px) {
+    .card {
+        gap: 10px;
+        padding-bottom: 15px;
+    }
+    .card p {
+        font-size: .889rem;
+        line-height: 1.6;
+    } 
+    .card__meta {
+        font-size: .833rem;
+        padding-bottom: 18px;
+        padding-top: 6px;
+    }
+    .card__author {
+        padding-bottom: 6px;
+    }
+    .card__author-text {
+        padding-bottom: 3px;
+        font-size: .833rem;
+    }
+}
